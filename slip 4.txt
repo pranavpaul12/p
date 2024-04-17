@@ -1,0 +1,21 @@
+Q1. A) Write a program in GO language to print a recursive sum of digits
+of a given number.
+
+package main
+import "fmt"
+
+func recursive1(n int)int{
+    if(n<10){
+        return n
+    }else{
+        return n % 10+ recursive1(n/10)
+    }
+}
+
+func main(){
+    var num int
+    fmt.Print("enter the number:")
+    fmt.Scanln(&num)
+    sum := recursive1(num)
+    fmt.Printf("sum of %d = %d",num,sum)
+}

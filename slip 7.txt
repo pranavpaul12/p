@@ -1,0 +1,25 @@
+B
+
+
+package main
+import "fmt"
+type Student struct{
+    Name string
+    Id int
+    Age int
+}
+func (s *Student) show(){
+    fmt.Println("student Details:")
+    fmt.Println("Student Name: ",s.Name)
+      fmt.Println("Student Id: ",s.Id)
+        fmt.Println("Student Age: ",s.Age)
+}
+func main(){
+    student := &Student{
+        Name: "Pranav",
+        Id: 101,
+        Age: 20,
+        
+}
+student.show()
+}

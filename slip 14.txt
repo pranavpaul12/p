@@ -1,0 +1,22 @@
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+       numbers := []int{1, 2, 3, 4, 5}
+    fmt.Println("Initial Slice:", numbers)
+    numbers = append(numbers, 6, 7, 8)
+    fmt.Println("After Appending:", numbers)
+    indexToRemove := 2
+    numbers = append(numbers[:indexToRemove], numbers[indexToRemove+1:]...)
+    fmt.Println("After Removing Element at Index", indexToRemove, ":", numbers)
+
+    copyOfNumbers := make([]int, len(numbers))
+    copy(copyOfNumbers, numbers)
+    fmt.Println("Copy of Slice:", copyOfNumbers)
+
+        copyOfNumbers[0] = 100
+    fmt.Println("Modified Copy of Slice:", copyOfNumbers)
+}

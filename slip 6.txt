@@ -1,0 +1,17 @@
+B
+
+package main
+import "fmt"
+
+func copy(src []int,des []int){
+    for i:= range src {
+        des[i] = src[i]
+    }
+}
+func main(){
+    source := []int{1,2,3,4}
+    destination := make([]int ,len(source))
+    copy(source,destination)
+    fmt.Println("source array :",source)
+    fmt.Println("Destination array: ",destination)
+}

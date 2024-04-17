@@ -1,0 +1,27 @@
+Q1.
+package main
+import "fmt"
+func palin(num int)bool{
+    original := num
+    rev :=0
+    for(num > 0){
+        remainder := num % 10
+        rev = rev * 10 + remainder
+        num = num / 10
+    }
+    if(original == rev){
+        return true
+    }else{
+        return false
+    }
+}
+func main(){
+    var num int
+    fmt.Print("enter the number: ")
+    fmt.Scanln(&num)
+    if palin(num){
+        fmt.Println(num,"it is palindrome")
+    }else{
+        fmt.Println(num,"not a palindrome")
+    }
+}
